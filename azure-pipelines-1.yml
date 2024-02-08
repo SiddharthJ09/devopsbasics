@@ -25,10 +25,13 @@ steps:
   inputs:
     containerRegistry: 'dockImage'
     command: 'login'
+    addBaseImageData: false
 
 - task: Docker@2
   inputs:
     containerRegistry: 'dockImage'
     repository: 'siddharthsjadhav / firstdockerrepo'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/AzureDockerfile'
+    addBaseImageData: false
+

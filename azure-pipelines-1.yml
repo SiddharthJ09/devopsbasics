@@ -24,6 +24,12 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'dockImage'
+    command: 'logout'
+    addBaseImageData: false
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockImage'
     command: 'login'
     addBaseImageData: false
 
